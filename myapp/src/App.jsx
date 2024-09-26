@@ -145,3 +145,23 @@
 
 
 //<------------------------------------------------------------------------->
+
+
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './Form/Login';
+import Signup from './Form/Signup';
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<h1>Welcome! Please go to /login or /signup</h1>} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
