@@ -25,6 +25,52 @@
 
 
 
+// import { useState } from 'react'
+
+// const Usestate = () => {
+//     // eslint-disable-next-line no-unused-vars
+//     let [color,setColor]= useState('red')
+
+//     function fun1() {
+//       return   setColor('green')
+//     }
+
+//   return (
+//     <div style={{backgroundColor:'green' , height:'100vh',width:"100vw"}}>
+//         <button onClick={fun1}>Color Green</button>
+//     </div>
+//   )
+// }
+
+// export default Usestate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //<-----------------------------Example 2---------------------------------------->
 
 // import { useState } from 'react'

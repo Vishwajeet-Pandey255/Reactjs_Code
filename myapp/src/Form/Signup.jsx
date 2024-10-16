@@ -1,7 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
+import './Card.css'
 
 const Signup = () => {
   const [input, setInput] = useState({ name: "", email: "", password: "" });
+  const [signupStatus, setSignupStatus] = useState(""); // Added for feedback
+  const navigate = useNavigate(); // Hook for navigation
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -10,14 +14,27 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Signup submitted:', input);
-    // Add signup logic here
+    
+    // Store user data in localStorage
+    const userData = { 
+      name: input.name, 
+      email: input.email, 
+      password: input.password 
+    };
+    localStorage.setItem("user", JSON.stringify(userData));
+
+    console.log('Signup submitted:', userData);
+    setSignupStatus("Signup successful! You can now log in.");
+    
+    // Redirect to a login page or home
+    navigate('/login'); // Change this as needed
   };
 
   return (
-    <div>
+    <div className='card'>
       <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
+        <div className='form-group'>
         <input
           type='text'
           name='name'
@@ -26,8 +43,10 @@ const Signup = () => {
           placeholder='Enter your name'
           required
         />
+        </div>
         <br /><br />
 
+<div className='form-group'>
         <input
           type='email'
           name='email'
@@ -36,8 +55,10 @@ const Signup = () => {
           placeholder='Enter your email'
           required
         />
+        </div>
         <br /><br />
 
+        <div className='form-group'>
         <input
           type='password'
           name='password'
@@ -46,10 +67,13 @@ const Signup = () => {
           placeholder='Enter your password'
           required
         />
+        </div>
         <br /><br />
 
         <button type='submit'>Signup</button>
       </form>
+
+      {signupStatus && <p>{signupStatus}</p>} {/* Display status messages */}
     </div>
   );
 };

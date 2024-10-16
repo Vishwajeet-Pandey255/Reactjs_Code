@@ -22,6 +22,59 @@
 // export default UseEffect;
 
 
+
+
+
+// import { useEffect, useState } from 'react'
+
+// const UseEffect = () => {
+
+//     let[count ,setCount] = useState(0)
+
+//     useEffect(()=>{
+//         setTimeout(()=>{    // useEffect(cb,[])
+//             setCount((count) => count+1)
+//         },2000)
+
+//     },[count])
+//   return (
+//     <div>
+//         <p>I have randered {count} Times</p>
+//     </div>
+//   )
+// }
+
+// export default UseEffect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //<--------------------------------------------------------------------------------->
 
 // ////<-----------------------Fetching Data using UseEffect Hook>
