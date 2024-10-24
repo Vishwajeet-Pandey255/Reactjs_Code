@@ -1,10 +1,23 @@
-/* eslint-disable no-unused-vars */
+//* eslint-disable no-unused-vars */
+//* eslint-disable no-unused-vars */
 //* eslint-disable no-unused-vars */
 // //<--------------------------------React-Hooks---------------------------------------->
 
-import Api from "./Api"
-import NavBar from "./AddToCart/NavBar1"
-import Home from "./ReactHooks/Home1"
+// import { useState } from "react"
+
+// import { useState } from "react"
+
+// import Login from "./Form/Login"
+
+// import { useState } from "react"
+
+// import { memo, useState } from "react"
+
+// import { useState } from "react"
+
+// import Api from "./Api"
+// import NavBar from "./AddToCart/NavBar1"
+// import Home from "./ReactHooks/Home1"
 
 //import Home from "./ReactHooks/Home"
 
@@ -71,24 +84,29 @@ import Home from "./ReactHooks/Home1"
 
 // //<----------------------------------------------Bootstrap-------------------------------------->
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import Cat from './Bootstrap/Cat';
+import Navbar from './Bootstrap/Navbar';
+import Card from './Bootstrap/Card';
 
 
-// // import 'bootstrap/dist/css/bootstrap.min.css';
-// // import 'bootstrap/dist/js/bootstrap.bundle.min';
-// // import Cat from './Bootstrap/Cat';
-// // import Navbar from './Bootstrap/Navbar';
+
+const App = () => {
+  return (
+    <div>
+      <Navbar/>
+      <Cat/>
+      <Card/>
+    </div>
+  )
+}
+
+export default App
 
 
-// // const App = () => {
-// //   return (
-// //     <div>
-// //       <Navbar/>
-// //       <Cat/>
-// //     </div>
-// //   )
-// // }
 
-// // export default App
+
 
 
 // //<------------------------------------------------------------------------------------------------->
@@ -147,11 +165,9 @@ import Home from "./ReactHooks/Home1"
 // export default App
 
 
-//<------------------------------------------------------------------------->
+//<------------------------------------Form------------------------------------->
 
 
-
-// import React from 'react';
 // import { Routes, Route, Link } from 'react-router-dom';
 // import Login from "./Form/Login";
 // import Signup from "./Form/Signup";
@@ -474,29 +490,130 @@ import Home from "./ReactHooks/Home1"
 
 //<--------------------------------Redux------------------------------->
 
-import React,{useState} from 'react'
-import NavBar1 from "./AddToCart/NavBar1"
-import {Routes,Route}   from 'react-router-dom'
-import Home1 from "./AddToCart/Home1"
-import Cart from './AddToCart/Cart'
-const App = () => {
-  let [cartData,SetCartData]=useState([])
-  // console.log(cartData,"mainnnn");
+// import React,{useState} from 'react'
+// import NavBar1 from "./AddToCart/NavBar1"
+// import {Routes,Route}   from 'react-router-dom'
+// import Home1 from "./AddToCart/Home1"
+// import Cart from './AddToCart/Cart'
+// const App = () => {
+//   let [cartData,SetCartData]=useState([])
+//   // console.log(cartData,"mainnnn");
   
-   return (
-    <div>
-      <NavBar1/>
-      <Routes>
-<Route   path='/'  element={<Home1  cartData={cartData} SetCartData={SetCartData}   />}/>
-<Route   path='/cart'  element={<Cart cartData={cartData} SetCartData={SetCartData} />}/>
+//    return (
+//     <div>
+//       <NavBar1/>
+//       <Routes>
+// <Route   path='/'  element={<Home1  cartData={cartData} SetCartData={SetCartData}   />}/>
+// <Route   path='/cart'  element={<Cart cartData={cartData} SetCartData={SetCartData} />}/>
 
-      </Routes>
-    </div>
-  )
-}
+//       </Routes>
+//     </div>
+//   )
+// }
 
-export default App
+// export default App
 
 //<---------------------------------------------------------------------------------->
 
+// import Login from './Form/Login'
+// import { Routes ,Route ,  Link } from 'react-router-dom'
+// import Signup from './Form/Signup'
+
+// const App = () => {
+//   return (
+//     <div>
+
+//       <nav>    
+//      <Link to="/login">Login</Link>
+//      <Link to="/signup">Signup</Link>      
+//       </nav>
+    
+//       <Routes>
+//         <Route path='/' element={<Login/>}/>
+//         <Route path='/login' element={<Login/>}/>
+//         <Route path="/signup" element={<Signup />} />
+
+//       </Routes>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+//<------------------------------------useMEMo------------------------------>
+
+
+// const App = () => {
+//     let[count,setCount] = useState(0);
+//     console.log("Apppplliiiiiii");
+    
+//     function cashFun111() {
+//         console.log('Modijiiii');
+        
+//     }
+
+//   return (
+//     <div>
+// <h1>APP</h1>
+
+
+// <button onClick={()=>setCount(count+1)}>Dikh Gya</button>
+// <MemoChild cashFun111={cashFun111}/>
+//     </div>
+//   )
+// }
+
+
+// const Child = () => {
+//     console.log('Childdeeeee');
+
+//   return (
+//     <div>Childeeeee</div>
+//   )
+
+// }
+// let MemoChild = memo(Child)
+
+// export default App
+
+
+
+//<---------------------------------Data Fetching-------------------------------------------->
+
+// import axios from 'axios';
+// import { useEffect, useState } from "react"
+// import './App.css'
+// const App = () => {
+// const [data,setData] = useState([])
+
+// async function call() {
+//   let ApiData = await axios('https://dummyjson.com/recipes')
+//   setData(ApiData.data.recipes)
+// }
+
+// useEffect(()=>{
+//   call()
+// } ,[])
+
+
+
+//   return (
+//     <div>
+//       {
+//       data.map((a)=>{
+//         return(<>
+//      <h2>{a.id}</h2>
+//      <img src={a.image}/>
+//      <h2>{a.name}</h2>
+//      <h2>{a.mealType}</h2>
+//      </>)
+//       })
+//       }
+      
+//     </div>
+//   )
+// }
+
+// export default App
 

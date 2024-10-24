@@ -5,6 +5,12 @@
   text-align: center;
  }
 
+ img {
+  height: 400px;
+ }
+
+
+ 
 
  /* .recipies {
    display: inline-block;

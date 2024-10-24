@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './Card.css'
 
+
 const Signup = () => {
   const [input, setInput] = useState({ name: "", email: "", password: "" });
   const [signupStatus, setSignupStatus] = useState(""); // Added for feedback
@@ -11,6 +12,7 @@ const Signup = () => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
   };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -79,3 +81,8 @@ const Signup = () => {
 };
 
 export default Signup;
+
+
+
+
+

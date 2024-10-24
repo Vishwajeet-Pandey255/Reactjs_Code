@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate }  from 'react-router-dom';
 import './Card.css';
 
+
 const Login = () => {
-  const navigate = useNavigate(); // Call useNavigate as a function
+  const navigate = useNavigate(); // Call useNavigate as a function       
   
   const [input, setInput] = useState({ email: "", password: "" });
 
@@ -11,6 +12,7 @@ const Login = () => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
   };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -53,5 +55,9 @@ const Login = () => {
     </div>
   );
 };
-
+ 
 export default Login;
+
+
+
+
